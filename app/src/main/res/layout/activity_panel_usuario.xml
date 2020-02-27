@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/fondoregistro"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PanelUsuario">
+
+    <TextView
+        android:id="@+id/txtv_nombres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/opensansbold"
+        android:text="Mi nombre"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_foto" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/opensansbold"
+        android:text="Nombre(s):"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtv_nombres"
+        app:layout_constraintEnd_toStartOf="@+id/txtv_nombres"
+        app:layout_constraintTop_toTopOf="@+id/txtv_nombres"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/opensansbold"
+        android:text="Apellidos:"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtv_apellidos"
+        app:layout_constraintEnd_toStartOf="@+id/txtv_apellidos"
+        app:layout_constraintTop_toTopOf="@+id/txtv_apellidos" />
+
+    <TextView
+        android:id="@+id/txtv_apellidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/opensansbold"
+        android:text="Mis apellidos"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.646"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtv_nombres" />
+
+    <TextView
+        android:id="@+id/txtvOcupacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/opensansbold"
+        android:text="Mi ocupacion"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.659"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtv_apellidos" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/opensansbold"
+        android:text="Ocupación:"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtvOcupacion"
+        app:layout_constraintEnd_toStartOf="@+id/txtvOcupacion"
+        app:layout_constraintTop_toTopOf="@+id/txtvOcupacion" />
+
+    <TextView
+        android:id="@+id/txtv_correo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/opensansbold"
+        android:text="Micorreo@gmail.com"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.782"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvOcupacion" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/opensansbold"
+        android:text="Correo:"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtv_correo"
+        app:layout_constraintEnd_toStartOf="@+id/txtv_correo"
+        app:layout_constraintTop_toTopOf="@+id/txtv_correo" />
+
+    <Button
+        android:id="@+id/btn_actualizarinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fondobotonregistro"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Actualizar informacion"
+        android:textColor="#FFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.923" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_foto"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.121"
+        app:srcCompat="@drawable/fotopordefecto" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/opensanslight"
+        android:text="Toca la imagen para cambiar tu foto"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/img_foto"
+        app:layout_constraintStart_toStartOf="@+id/img_foto"
+        app:layout_constraintTop_toBottomOf="@+id/img_foto" />
+
+    <TextView
+        android:id="@+id/txtvCancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/opensansbold"
+        android:text="Volver"
+        android:textColor="#FF3F62"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_actualizarinfo"
+        app:layout_constraintStart_toStartOf="@+id/btn_actualizarinfo"
+        app:layout_constraintTop_toBottomOf="@+id/btn_actualizarinfo" />
+
+    <Button
+        android:id="@+id/btnCerrarsesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/fondobotonregistro"
+        android:drawableRight="@drawable/logout"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:text="Cerrar sesión  "
+        android:textColor="#FFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtv_correo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

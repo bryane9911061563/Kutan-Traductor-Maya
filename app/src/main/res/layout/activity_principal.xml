@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#FFFF"
+    android:layout_height="match_parent"
+    tools:context=".PrincipalActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:id="@+id/textNombreUs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:maxLines="2"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:singleLine="true"
+                android:text="Hola Bryan Edilberto!"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/fotopordefecto" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/fondo_tarjeta_sugerencias"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp">
+
+                        <TextView
+                            android:id="@+id/txtIdioma1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/opensansbold"
+                            android:gravity="center"
+                            android:text="Español"
+                            android:textColor="#FFFF"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/imgInvertirIdioma"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:background="@drawable/fondoboton_invertir"
+                            android:padding="2dp"
+                            app:srcCompat="@drawable/switchhhh" />
+
+                        <TextView
+                            android:id="@+id/txtIdioma2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/opensansbold"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="Maya"
+                            android:textColor="#FFFF"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="7dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensansbold"
+                            android:text="Frase:"
+                            android:textColor="#FFFF"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/editextLoquedices"
+                            android:layout_width="match_parent"
+                            android:layout_height="57dp"
+                            android:background="@drawable/textbox_transparente"
+                            android:ems="10"
+                            android:fontFamily="@font/opensansregular"
+                            android:inputType="textPersonName"
+                            android:text="Lo que dices"
+                            android:textColor="#FFFF"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/textView17"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensansbold"
+                            android:text="Traduccion:"
+                            android:textColor="#FFFF"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/editextLoquetraduce"
+                            android:layout_width="match_parent"
+                            android:layout_height="57dp"
+                            android:background="@drawable/textbox_transparente"
+                            android:ems="10"
+                            android:fontFamily="@font/opensansregular"
+                            android:inputType="textPersonName"
+                            android:text="Lo que dices"
+                            android:textColor="#FFFF"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageview_botongrabar"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="400dp"
+        android:background="#FFFFFF"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/microfonodetenido" />
+
+    <ImageButton
+        android:id="@+id/btnMipanel"
+        android:layout_width="45dp"
+        android:scaleType="fitXY"
+        android:layout_height="45dp"
+        android:layout_marginStart="36dp"
+        android:background="#FFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.011"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.881"
+        app:srcCompat="@drawable/usercolor" />
+
+    <ImageButton
+        android:id="@+id/boton_pictogramas"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="28dp"
+        android:background="#FFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="fitXY"
+        app:layout_constraintHorizontal_bias="0.968"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.88"
+        app:srcCompat="@drawable/studypequeno" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

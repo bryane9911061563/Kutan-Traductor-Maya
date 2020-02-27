@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/fondoregistro"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistroUsuario">
+
+    <EditText
+        android:id="@+id/txtNombres"
+        android:layout_width="288dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="364dp"
+        android:background="@drawable/fondotextboxregistro"
+        android:ems="10"
+        android:fontFamily="@font/opensansregular"
+        android:hint="Nombre(s)"
+        android:inputType="textPersonName"
+        android:textColorHint="#535353"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/txtApellidos"
+        android:layout_width="288dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/fondotextboxregistro"
+        android:ems="10"
+        android:fontFamily="@font/opensansregular"
+        android:hint="Apellidos"
+        android:inputType="textPersonName"
+        android:textColorHint="#535353"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombres"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/txtOcupacion"
+        android:layout_width="288dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/fondotextboxregistro"
+        android:ems="10"
+        android:fontFamily="@font/opensansregular"
+        android:hint="Ocupacion"
+        android:inputType="textPersonName"
+        android:textColorHint="#535353"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtApellidos"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="288dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/fondotextboxregistro"
+        android:ems="10"
+        android:fontFamily="@font/opensansregular"
+        android:hint="Email "
+        android:inputType="textEmailAddress"
+        android:textColorHint="#535353"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtOcupacion"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/txtContraseña"
+        android:layout_width="288dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/fondotextboxregistro"
+        android:ems="10"
+        android:fontFamily="@font/opensansregular"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:textColorHint="#535353"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:background="@drawable/fondobotonregistro"
+        android:fontFamily="@font/opensansregular"
+        android:text="Registrarse"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtContraseña"
+        app:layout_constraintVertical_bias="0.217" />
+
+    <TextView
+        android:id="@+id/txtvCancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensansbold"
+        android:text="En otro momento"
+        android:textColor="#FF3F61"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrar"
+        app:layout_constraintVertical_bias="0.23" />
+
+
+    <ImageView
+        android:id="@+id/imgvUserPhoto"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/txtNombres"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.505"
+        app:srcCompat="@drawable/fotopordefecto" />
+
+    <ProgressBar
+        android:id="@+id/regProgressbar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imgvUserPhoto"
+        app:layout_constraintEnd_toEndOf="@+id/imgvUserPhoto"
+        app:layout_constraintStart_toStartOf="@+id/imgvUserPhoto"
+        app:layout_constraintTop_toTopOf="@+id/imgvUserPhoto" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

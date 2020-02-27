@@ -257,7 +257,8 @@ public class PrincipalActivity extends AppCompatActivity {
                 if(resultCode==RESULT_OK && null!=data){
                     ArrayList<String> result=data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                     TXT_Loquedices.setText(result.get(0));
-                    RegistrarTraduccion();
+                    TraducirFirebase(TXT_Loquedices.getText().toString());
+
 
                     /*dbkutan.agregarTraduccionreciente(TXT_Loquedices.getText().toString(),TXT_Loquetraduce.getText().toString());
                     Toast.makeText(this, "Agregado a recientes", Toast.LENGTH_SHORT).show();*/
@@ -266,7 +267,45 @@ public class PrincipalActivity extends AppCompatActivity {
         }
     }
 
-    private void RegistrarTraduccion(){
+    private void TraducirFirebase(String TextoEspan) {
+        mDatabase.getDatabase().getInstance().getReference();
+        //Object query =mDatabase.child("Frases").orderByChild("Texto").equalTo("me siento mejor");
+       /* mDatabase.child("Frases").orderByChild("Texto").equalTo(TextoEspan).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Log.d("+++++++++++++",dataSnapshot.getValue().toString());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });*/
+        mDatabase.child("Traduccion").orderByChild("EspañolMaya").equalTo("-M0c7JNXnrkP5mj3pV91").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Log.d("+++++++++++++",dataSnapshot.toString());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });/*
+        mDatabase.child("Frases").child("el id obtenido de lo anterior").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Log.d("+++++++++++++",dataSnapshot.toString());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });*/
+    }
+
+   /* private void RegistrarTraduccion(){
         String id=mAuth.getInstance().getCurrentUser().getUid();
         dbLocalKutan traduc=new dbLocalKutan(this,"Traduccionesrecientes",null, 1);
         SQLiteDatabase Basededatos=traduc.getReadableDatabase();
@@ -286,12 +325,12 @@ public class PrincipalActivity extends AppCompatActivity {
         else {
             Toast.makeText(this, "Ooy", Toast.LENGTH_SHORT).show();
         }
-    }
+    }*/
 
-    private void Buscar(View view){
+    /*private void Buscar(View view){
         dbLocalKutan traducciones=new dbLocalKutan(this,"TraduccionesRecientes",null,1);
         SQLiteDatabase basededatos=traducciones.getWritableDatabase();
 
 
-    }
+    }*/
 }
